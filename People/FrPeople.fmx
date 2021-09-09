@@ -1,0 +1,43 @@
+object framePeople: TframePeople
+  Size.Width = 320.000000000000000000
+  Size.Height = 240.000000000000000000
+  Size.PlatformDefault = False
+  object GroupBox1: TGroupBox
+    Align = Client
+    Padding.Left = 8.000000000000000000
+    Padding.Top = 24.000000000000000000
+    Padding.Right = 8.000000000000000000
+    Padding.Bottom = 8.000000000000000000
+    Size.Width = 320.000000000000000000
+    Size.Height = 240.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'People'
+    object Layout1: TLayout
+      Align = Bottom
+      Position.X = 8.000000000000000000
+      Position.Y = 182.000000000000000000
+      Size.Width = 304.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object lstPeople: TListSpinner
+      Align = Client
+      Size.Width = 304.000000000000000000
+      Size.Height = 158.000000000000000000
+      Size.PlatformDefault = False
+      ItemCount = 0
+      OnGetShowItem = lstPeopleGetShowItem
+      object edPerson: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        ReadOnly = True
+        Position.X = 104.000000000000000000
+        Position.Y = 88.000000000000000000
+        object InnerGlow: TInnerGlowEffect
+          Softness = 0.400000005960464500
+          GlowColor = claGold
+          Opacity = 0.899999976158142100
+        end
+      end
+    end
+  end
+end

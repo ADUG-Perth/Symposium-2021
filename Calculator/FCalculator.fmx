@@ -1,0 +1,32 @@
+object frmCalculator: TfrmCalculator
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object edFormula: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Text = '4 + 5'
+    Position.X = 40.000000000000000000
+    Position.Y = 56.000000000000000000
+    Size.Width = 401.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object butCalculate: TButton
+    Position.X = 40.000000000000000000
+    Position.Y = 104.000000000000000000
+    Text = 'butCalculate'
+    OnClick = butCalculateClick
+  end
+  object edResult: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Position.X = 64.000000000000000000
+    Position.Y = 168.000000000000000000
+  end
+end

@@ -1,0 +1,114 @@
+object frmLogger: TfrmLogger
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 173
+  ClientWidth = 353
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object loLeft: TLayout
+    Align = Left
+    Size.Width = 65.000000000000000000
+    Size.Height = 173.000000000000000000
+    Size.PlatformDefault = False
+    object labText: TLabel
+      Align = Top
+      Margins.Left = 8.000000000000000000
+      Margins.Top = 11.000000000000000000
+      Position.X = 8.000000000000000000
+      Position.Y = 11.000000000000000000
+      Size.Width = 57.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Text'
+    end
+    object labTime: TLabel
+      Align = Top
+      Margins.Left = 8.000000000000000000
+      Margins.Top = 8.000000000000000000
+      Position.X = 8.000000000000000000
+      Position.Y = 36.000000000000000000
+      Size.Width = 57.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Time'
+    end
+    object labStrategy: TLabel
+      Align = Top
+      Margins.Left = 8.000000000000000000
+      Margins.Top = 47.000000000000000000
+      Position.X = 8.000000000000000000
+      Position.Y = 100.000000000000000000
+      Size.Width = 57.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Strategy'
+    end
+  end
+  object loRight: TLayout
+    Align = Client
+    Margins.Left = 8.000000000000000000
+    Margins.Top = 8.000000000000000000
+    Margins.Right = 8.000000000000000000
+    Margins.Bottom = 8.000000000000000000
+    Size.Width = 272.000000000000000000
+    Size.Height = 157.000000000000000000
+    Size.PlatformDefault = False
+    object edText: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Top
+      Text = 'Some text'
+      Margins.Bottom = 8.000000000000000000
+      Size.Width = 272.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object tbTime: TTrackBar
+      Align = Top
+      CanParentFocus = True
+      Orientation = Horizontal
+      Margins.Bottom = 8.000000000000000000
+      Position.Y = 30.000000000000000000
+      Size.Width = 272.000000000000000000
+      Size.Height = 19.000000000000000000
+      Size.PlatformDefault = False
+      Value = 10.000000000000000000
+    end
+    object loControls: TLayout
+      Align = Client
+      Size.Width = 272.000000000000000000
+      Size.Height = 100.000000000000000000
+      Size.PlatformDefault = False
+      object butSend: TButton
+        Position.Y = 4.000000000000000000
+        Text = 'Send'
+        OnClick = butSendClick
+      end
+      object butLocal: TButton
+        Position.X = 88.000000000000000000
+        Position.Y = 32.000000000000000000
+        Text = 'Local'
+        OnClick = butLocalClick
+      end
+      object butRemote: TButton
+        Position.X = 176.000000000000000000
+        Position.Y = 32.000000000000000000
+        Text = 'Remote'
+        OnClick = butRemoteClick
+      end
+      object GlowEffect: TInnerGlowEffect
+        Softness = 0.400000005960464500
+        GlowColor = claGold
+        Opacity = 0.899999976158142100
+        Enabled = False
+      end
+      object butToScreen: TButton
+        Position.Y = 32.000000000000000000
+        Text = 'To screen'
+        OnClick = butToScreenClick
+      end
+    end
+  end
+end

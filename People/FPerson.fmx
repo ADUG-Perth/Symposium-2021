@@ -1,0 +1,32 @@
+object frmPerson: TfrmPerson
+  Left = 0
+  Top = 0
+  Caption = 'Person'
+  ClientHeight = 173
+  ClientWidth = 341
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  inline framePerson: TframePerson
+    Align = Client
+    Size.Width = 341.000000000000000000
+    Size.Height = 173.000000000000000000
+    Size.PlatformDefault = False
+    inherited edPerID: TEdit
+      Size.Width = 222.000000000000000000
+    end
+    inherited edPerName: TEdit
+      Size.Width = 222.000000000000000000
+    end
+    inherited edFamName: TEdit
+      Size.Width = 222.000000000000000000
+    end
+    inherited butSave: TButton
+      Position.X = 237.000000000000000000
+    end
+    inherited butReset: TButton
+      Position.X = 141.000000000000000000
+    end
+  end
+end

@@ -1,0 +1,73 @@
+object framePerson: TframePerson
+  Size.Width = 320.000000000000000000
+  Size.Height = 154.000000000000000000
+  Size.PlatformDefault = False
+  object labPerID: TLabel
+    Position.X = 8.000000000000000000
+    Position.Y = 16.000000000000000000
+    Size.Width = 89.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Person ID'
+  end
+  object labPerName: TLabel
+    Position.X = 8.000000000000000000
+    Position.Y = 48.000000000000000000
+    Size.Width = 89.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Person Name'
+  end
+  object labFamName: TLabel
+    Position.X = 8.000000000000000000
+    Position.Y = 80.000000000000000000
+    Size.Width = 89.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Family Name'
+  end
+  object edPerID: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Anchors = [akLeft, akTop, akRight]
+    ReadOnly = True
+    Position.X = 104.000000000000000000
+    Position.Y = 14.000000000000000000
+    Size.Width = 201.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object edPerName: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Anchors = [akLeft, akTop, akRight]
+    Position.X = 104.000000000000000000
+    Position.Y = 46.000000000000000000
+    Size.Width = 201.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    OnTyping = edPerNameTyping
+  end
+  object edFamName: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Anchors = [akLeft, akTop, akRight]
+    Position.X = 104.000000000000000000
+    Position.Y = 78.000000000000000000
+    Size.Width = 201.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    OnTyping = edFamNameTyping
+  end
+  object butSave: TButton
+    Anchors = [akTop, akRight]
+    Position.X = 216.000000000000000000
+    Position.Y = 120.000000000000000000
+    Text = 'Save'
+    OnClick = butSaveClick
+  end
+  object butReset: TButton
+    Anchors = [akTop, akRight]
+    Position.X = 120.000000000000000000
+    Position.Y = 120.000000000000000000
+    Text = 'Reset'
+    OnClick = butResetClick
+  end
+end

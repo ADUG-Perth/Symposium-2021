@@ -1,0 +1,31 @@
+object frameContext: TframeContext
+  Align = Client
+  Size.Width = 320.000000000000000000
+  Size.Height = 240.000000000000000000
+  Size.PlatformDefault = False
+  object panContext: TGroupBox
+    Align = Client
+    Padding.Left = 8.000000000000000000
+    Padding.Top = 24.000000000000000000
+    Padding.Right = 8.000000000000000000
+    Padding.Bottom = 8.000000000000000000
+    Size.Width = 320.000000000000000000
+    Size.Height = 240.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Context'
+    object lstContext: TListSpinner
+      Align = Client
+      Size.Width = 304.000000000000000000
+      Size.Height = 208.000000000000000000
+      Size.PlatformDefault = False
+      ItemCount = 0
+      OnGetShowItem = lstContextGetShowItem
+      OnChanged = lstContextChange
+      object edRow: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Position.X = 48.000000000000000000
+        Position.Y = 48.000000000000000000
+      end
+    end
+  end
+end

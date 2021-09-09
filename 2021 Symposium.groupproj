@@ -1,0 +1,84 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{B2549938-21CF-41DF-AA15-4E24CDF2A568}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="People\PeopleDemo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Critters\CrittersDemo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Logger\LoggerDemo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="LoggerServer\LoggerServer.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Calculator\CalculatorDemo.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="PeopleDemo">
+        <MSBuild Projects="People\PeopleDemo.dproj"/>
+    </Target>
+    <Target Name="PeopleDemo:Clean">
+        <MSBuild Projects="People\PeopleDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PeopleDemo:Make">
+        <MSBuild Projects="People\PeopleDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="CrittersDemo">
+        <MSBuild Projects="Critters\CrittersDemo.dproj"/>
+    </Target>
+    <Target Name="CrittersDemo:Clean">
+        <MSBuild Projects="Critters\CrittersDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CrittersDemo:Make">
+        <MSBuild Projects="Critters\CrittersDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="LoggerDemo">
+        <MSBuild Projects="Logger\LoggerDemo.dproj"/>
+    </Target>
+    <Target Name="LoggerDemo:Clean">
+        <MSBuild Projects="Logger\LoggerDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="LoggerDemo:Make">
+        <MSBuild Projects="Logger\LoggerDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="LoggerServer">
+        <MSBuild Projects="LoggerServer\LoggerServer.dproj"/>
+    </Target>
+    <Target Name="LoggerServer:Clean">
+        <MSBuild Projects="LoggerServer\LoggerServer.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="LoggerServer:Make">
+        <MSBuild Projects="LoggerServer\LoggerServer.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="CalculatorDemo">
+        <MSBuild Projects="Calculator\CalculatorDemo.dproj"/>
+    </Target>
+    <Target Name="CalculatorDemo:Clean">
+        <MSBuild Projects="Calculator\CalculatorDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CalculatorDemo:Make">
+        <MSBuild Projects="Calculator\CalculatorDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="PeopleDemo;CrittersDemo;LoggerDemo;LoggerServer;CalculatorDemo"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="PeopleDemo:Clean;CrittersDemo:Clean;LoggerDemo:Clean;LoggerServer:Clean;CalculatorDemo:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="PeopleDemo:Make;CrittersDemo:Make;LoggerDemo:Make;LoggerServer:Make;CalculatorDemo:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

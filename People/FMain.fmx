@@ -1,0 +1,98 @@
+object frmMain: TfrmMain
+  Left = 0
+  Top = 0
+  Caption = 'People'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 0
+  inline framePeople: TframePeople
+    Align = Left
+    Size.Width = 297.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    inherited GroupBox1: TGroupBox
+      Size.Width = 297.000000000000000000
+      Size.Height = 480.000000000000000000
+      inherited Layout1: TLayout
+        Position.Y = 422.000000000000000000
+        Size.Width = 281.000000000000000000
+      end
+      inherited lstPeople: TListSpinner
+        Size.Width = 281.000000000000000000
+        Size.Height = 398.000000000000000000
+        OnDblClick = framePeoplelstPeopleDblClick
+        ItemHeight = 24
+        OnChanged = framePeoplelstPeopleChanged
+      end
+    end
+  end
+  object Splitter1: TSplitter
+    Align = Left
+    Cursor = crHSplit
+    MinSize = 20.000000000000000000
+    Position.X = 297.000000000000000000
+    Size.Width = 9.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Layout1: TLayout
+    Align = Client
+    Size.Width = 334.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    object Layout2: TLayout
+      Align = Client
+      Size.Width = 334.000000000000000000
+      Size.Height = 326.000000000000000000
+      Size.PlatformDefault = False
+      object butListAll: TButton
+        Position.X = 16.000000000000000000
+        Position.Y = 24.000000000000000000
+        Text = 'List All'
+        OnClick = butListAllClick
+      end
+      object edListFilter: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Position.X = 112.000000000000000000
+        Position.Y = 80.000000000000000000
+        Size.Width = 209.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        OnTyping = butListFilterClick
+      end
+      object butListFilter: TButton
+        Position.X = 16.000000000000000000
+        Position.Y = 80.000000000000000000
+        Text = 'List Filtered'
+        OnClick = butListFilterClick
+      end
+    end
+    inline framePerson: TframePerson
+      Align = Bottom
+      Position.Y = 326.000000000000000000
+      Size.Width = 334.000000000000000000
+      Size.Height = 154.000000000000000000
+      Size.PlatformDefault = False
+      inherited edPerID: TEdit
+        Size.Width = 215.000000000000000000
+      end
+      inherited edPerName: TEdit
+        Size.Width = 215.000000000000000000
+      end
+      inherited edFamName: TEdit
+        Size.Width = 215.000000000000000000
+      end
+      inherited butSave: TButton
+        Position.X = 230.000000000000000000
+      end
+      inherited butReset: TButton
+        Position.X = 134.000000000000000000
+      end
+    end
+  end
+end
