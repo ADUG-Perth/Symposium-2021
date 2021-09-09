@@ -42,7 +42,9 @@ type
     property  PerName     : string        read fPerName     write SetPerName;
     property  FamName     : string        read fFamName     write SetFamName;
     function  FullName    : string;
+    //  Observer pattern
     property  OnChanged   : TNotifyEvents read fOnChanged;
+    //  Memento pattern
     procedure Backup;
     procedure Restore;
   end;

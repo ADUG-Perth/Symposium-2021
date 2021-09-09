@@ -182,7 +182,7 @@ begin
   //  Create critters
   fCritters  := TCritters.Create(True);
   //  Critter 1
-  Critter := CreateAndAddCritter(30, 30, 200, 200, 'Diamond');
+  Critter := CreateAndAddCritter(30, 30, 400, 100, 'Circle');
   Critter.Decorators.Add(CritterDecorators.Obtain('MoveForwards'), Critter.Context);
   Critter.Decorators.Add(CritterDecorators.Obtain('Turn'), Critter.Context);
   Critter.Context.SetValue('Speed', 3.0);
@@ -233,6 +233,7 @@ begin
   cmbVariableType.Enabled := Assigned(fSelected);
   edVariableName.Enabled  := Assigned(fSelected);
   butVariableAdd.Enabled  := Assigned(fSelected);
+  butVariableDel.Enabled  := Assigned(fSelected);
 end;
 
 procedure TfrmCritters.RefreshView;
